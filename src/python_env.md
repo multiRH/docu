@@ -33,4 +33,4 @@ pip install -r requirements_cpu.txt
 
 in case you have a GPU on your computer, use requirements_gpu.txt
 
-![img3](/src/img/pip__env.png)
+![img3](/src/img/pip__venv.png)
