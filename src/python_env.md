@@ -1,4 +1,4 @@
-# How to create a Python environment
+# 2. How to create a Python environment
 
 ### 1. Creation of Python environment
 
@@ -11,7 +11,7 @@ python -m venv [PATH]\venv_dl
 
 Path is the location where the new environment will be created.
 
-![img1](/src/img/create__venv.png)
+![img1](/src/img/venv/create__venv.png)
 
 ### 2. Installation of pip packages
 
@@ -21,7 +21,7 @@ Using a terminal, locate the path where the new Python environment #venv_dl# is:
 .\activate.ps1
 ```
 
-![img2](/src/img/activate__venv.png)
+![img2](/src/img/venv/activate__venv.png)
 
 ### 3. Installation of pip packages
 
@@ -33,4 +33,4 @@ pip install -r requirements_cpu.txt
 
 in case you have a GPU on your computer, use requirements_gpu.txt
 
-![img3](/src/img/pip__venv.png)
+![img3](/src/img/venv/pip__venv.png)
