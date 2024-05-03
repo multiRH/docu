@@ -11,7 +11,7 @@ python -m venv [PATH]\venv_dl
 
 Path is the location where the new environment will be created.
 
-![img1](/img/create__venv.png)
+![img1](/img/venv/create__venv.png)
 
 ### 2. Installation of pip packages
 
@@ -21,4 +21,16 @@ Using a terminal, locate the path where the new Python environment #venv_dl# is:
 .\activate.ps1
 ```
 
-![img1](/img/activate__venv.png)
+![img2](/img/venv/activate__venv.png)
+
+### 3. Installation of pip packages
+
+On the terminal execute the command:
+
+```
+pip install -r requirements_cpu.txt
+```
+
+in case you have a GPU on your computer, use requirements_gpu.txt
+
+![img2](/img/venv/pip.png)
