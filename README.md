@@ -1,22 +1,8 @@
 # Documentation
 
-### 1. Creation of Python environment
+This a documentation guide for:
 
-First, download the latest (stable) distribution of [Python](https://www.python.org/downloads/)
-Using a terminal (DOS for windows, otherwise just a Linux/Ubuntu terminal), change the directory to the path where the Python executable is (e.g., C:\Python312) and execute the command:
+1 - Basic commands for git
+2 - Creation of a python environment
 
-```
-python -m venv [PATH]\venv_dl
-```
-
-Path is the location where the new environment will be created.
-
-### 2. Installation of pip packages
-
-Using a terminal, locate the path where the new Python environment #venv_dl# is: (e.g., D:\venv_dl). Change to the directory ..\venv_dl\Scripts and execute the command:
-
-```
-.\activate.ps1
-```
-
-![img1](/img/venv.png)
+To learn markdown: [Markdown Cheat-sheet](https://www.markdownguide.org/cheat-sheet/)
