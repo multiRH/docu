@@ -34,3 +34,15 @@ pip install -r requirements_cpu.txt
 in case you have a GPU on your computer, use requirements_gpu.txt
 
 ![img3](/src/img/venv/pip__venv.png)
+
+To launch Spyder execute in the terminal the command:
+
+```
+spyder
+```
+
+To launch Jupyter Lab execute in the terminal the command:
+
+```
+jupyter lab
+```
