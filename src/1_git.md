@@ -1,5 +1,8 @@
 # 1. How to create a Python environment
 
+First install the latest distribution of git: [git](https://git-scm.com/)
+
+
 ### 1. Configuration of SSH keys 
 
 SSH configuration (in the git bash console), and create the keys in the origin pc (win) executing the command in the terminal:
