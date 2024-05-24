@@ -1,48 +1,122 @@
-# 2. How to create a Python environment
+# 1. How to create a Python environment
 
-### 1. Creation of Python environment
+### 1. Configuration of SSH keys 
 
-First, download the latest (stable) distribution of [Python](https://www.python.org/downloads/)
-Using a terminal (DOS for windows, otherwise just a Linux/Ubuntu terminal), change the directory to the path where the Python executable is (e.g., C:\Python312) and execute the command:
-
-```
-python -m venv [PATH]\venv_dl
-```
-
-Path is the location where the new environment will be created.
-
-![img1](/src/img/venv/create__venv.png)
-
-### 2. Installation of pip packages
-
-Using a terminal, locate the path where the new Python environment #venv_dl# is: (e.g., D:\venv_dl). Change to the directory ..\venv_dl\Scripts and execute the command:
+SSH configuration (in the git bash console), and create the keys in the origin pc (win) executing the command in the terminal:
 
 ```
-.\activate.ps1
+$ssh-keygen
 ```
 
-![img2](/src/img/venv/activate__venv.png)
-
-### 3. Installation of pip packages
-
-On the terminal execute the command:
+the terminal shows the output:
 
 ```
-pip install -r requirements_cpu.txt
+Enter passphrase:
+enter file location: 
+/c/Users/username/.ssh/
 ```
 
-in case you have a GPU on your computer, use requirements_gpu.txt
+and it creastes the keys: id_rsa and id_rsa.pub
 
-![img3](/src/img/venv/pip__venv.png)
-
-To launch Spyder execute in the terminal the command:
+Execute in the terminal:
 
 ```
-spyder
+$eval $(ssh-agent)
 ```
 
-To launch Jupyter Lab execute in the terminal the command:
+which outputs the agent pid: 
 
 ```
-jupyter lab
+Agent pid  2441
 ```
+
+Execute in the terminal:
+
+```
+$ssh-add ~/.ssh/id_rsa
+enter passphrase:
+```
+the terminal shows the output:
+
+```
+identity added
+```
+
+To add the SSH key to the git platform (e.g., bitbucket), execute the command in the terminal:
+
+```
+$ssh -T git@bitbucket.org
+```
+
+the terminal shows the output:
+
+```
+You can use git to connect to Bitbucket. Shell access is disabled.
+```
+
+### 2. Changing the https to ssh in the repo
+Change to repo location in the terminal and execute the commands:
+
+```
+$git remote -v
+```
+the terminal shows the output:
+
+```
+origin (fetch)
+origin (push)
+```
+
+Execute the command:
+
+```
+$git remote set-url origin git@bitbucket.org:user_name/repo_name.git
+```
+
+### 3. Configuring the SSH key in an additional PC
+Copy the public ssh key to the location of the folder .ssh, and execute the following commands:
+
+```
+$chmod 400 /home/user_name/.ssh/id_rsa
+$ssh-add /home/user_name/.ssh/id_rsa
+```
+
+### 4. Useful commands for git
+
+To clone a repo:
+
+```
+git clone <repo>
+```
+
+To check the status of a repo, if there are changes:
+```
+git status
+```
+
+To add changes in a file to the repo:
+```
+gid add FILE
+```
+
+To add all the files that have changes to the repo:
+```
+git add -A
+```
+
+To commit the changes to the repo:
+```
+git commit -m "commit message"
+```
+
+To first pull the actual status of the remote repo, and update the local repo:
+```
+git pull --rebase origin main
+```
+
+To push the commit to the remote repo:
+```
+git push
+```
+
+For more information check the website: [Getting started](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)
