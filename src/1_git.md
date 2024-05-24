@@ -1,4 +1,4 @@
-# A. Installation of git and basic commands
+# 1. Installation of git and basic commands
 
 First install the latest distribution of git: [git](https://git-scm.com/)
 
