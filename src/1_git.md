@@ -1,4 +1,4 @@
-# 1. How to create a Python environment
+# A. Installation of git and basic commands
 
 First install the latest distribution of git: [git](https://git-scm.com/)
 

@@ -1,4 +1,4 @@
-# 2. How to create a Python environment
+# B. How to create a Python environment
 
 ### 1. Creation of Python environment
 
