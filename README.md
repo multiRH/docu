@@ -1,7 +1,9 @@
 # Documentation
 
 This a compilation of links and references shared for ML Tesis:
+
 https://github.com/multiRH/docu/blob/main/src/python_env.md
+
 https://github.com/Kanaries/pygwalker
 https://mlflow.org/docs/latest/deployment/deploy-model-to-kubernetes/tutorial.html
 https://valohai.com/blog/kubeflow-vs-mlflow/
